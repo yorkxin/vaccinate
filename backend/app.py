@@ -12,6 +12,7 @@ from Parsers.ntu_taipei import *
 from Parsers.ntu_hsinchu import *
 from Parsers.ntu_yunlin import *
 from Parsers.tzuchi_taipei import *
+from Parsers.mackay_taipei import *
 
 
 app = Flask(
@@ -39,6 +40,7 @@ PARSERS: List[Callable[[], Tuple[int, AppointmentAvailability]]] = [
     errorBoundary(parseNTUHHsinchu),
     errorBoundary(parseNTUHYunlin),
     errorBoundary(parseTzuchiTaipei),
+    errorBoundary(parseMackayTaipei),
 ]
 
 
