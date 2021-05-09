@@ -22,4 +22,9 @@ class Hospital(TypedDict):
     website: str
 
 
+class PersistentData(TypedDict):
+    availability: str
+    updatedTime: int
+
+
 ScrapedData = Tuple[int, AppointmentAvailability]

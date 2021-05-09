@@ -1,7 +1,8 @@
 import redis, os
+import time
 from typing import TypedDict, Tuple, Dict, Callable, List, Any, Optional, NewType
 from enum import Enum
-from hospital_types import AppointmentAvailability, ScrapedData
+from hospital_types import AppointmentAvailability, ScrapedData, PersistentData
 from dotenv import load_dotenv
 
 
@@ -83,6 +84,14 @@ def hello_redis() -> None:
         def setAvailability(
             hospital_id: int, availability: AppointmentAvailability
         ) -> None:
+            current_time: int = time.time()
+            print(current_time)
+            data: PersistentData = {
+                "availability": availability.__str__(),
+                "updatedTime": current_time,
+            }
+            r.hset("hospital_data:" + str(hospital_id), mapping=data)
+            print(r.hgetall("hospital_data:" + str(hospital_id)))
             r.set("hospital:" + str(hospital_id), availability.__str__())
 
         availability = hospitalAvailability()

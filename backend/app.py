@@ -4,7 +4,7 @@ from typing import TypedDict, Tuple, Dict, Callable, List, Any, Optional
 from enum import Enum
 import requests
 from bs4 import BeautifulSoup
-from hospital_types import Hospital, HospitalID, AppointmentAvailability, ScrapedData
+from hospital_types import Hospital, HospitalID, AppointmentAvailability, ScrapedData, PersistentData
 
 # Parsers
 from Parsers.ntu_taipei import *
@@ -56,7 +56,8 @@ def hospitalData() -> List[Hospital]:
     def get_availability(
         hospital_id: int,
     ) -> Optional[ScrapedData]:
-        availability = r.get("hospital:" + str(hospital_id))
+        data: PersistentData = r.hgetall("hospital_data:" + str(hospital_id))
+        availability = data['availability']
         if availability == "AppointmentAvailability.AVAILABLE":
             availability = AppointmentAvailability.AVAILABLE
         elif availability == "AppointmentAvailability.UNAVAILABLE":
