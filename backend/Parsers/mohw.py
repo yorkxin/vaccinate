@@ -1,4 +1,4 @@
-from typing import Tuple
+from typing import Tuple, List, Any, Dict
 import requests
 from bs4 import BeautifulSoup
 from hospital_types import (
@@ -7,7 +7,7 @@ from hospital_types import (
     ScrapedData,
     HospitalAvailabilitySchema,
 )
-import aiohttp
+import aiohttp, asyncio
 
 
 async def parse_mohw_keelung() -> ScrapedData:
@@ -82,12 +82,14 @@ async def parse_mohw(
 
 
 async def parse_mohw_page(hostname: str, div_dr: str) -> bool:
-    entrypoint_url = (
+    entrypoint_url: str = (
         "https://{}/OINetReg/OINetReg.Reg/Reg_RegTable.aspx?DivDr={}&Way=Dept".format(
             hostname, div_dr
         )
     )
-    regtable_url = "https://{}/OINetReg/OINetReg.Reg/Sub_RegTable.aspx".format(hostname)
+    regtable_url: str = "https://{}/OINetReg/OINetReg.Reg/Sub_RegTable.aspx".format(
+        hostname
+    )
 
     timeout = aiohttp.ClientTimeout(total=10)
     async with aiohttp.ClientSession(timeout=timeout) as s:
@@ -116,15 +118,30 @@ async def parse_mohw_page(hostname: str, div_dr: str) -> bool:
             # the size of weeks might be zero, e.g. in Miaoli MOHW hospital the
             # reservation calendar is not paged
             return False
+        weeks
 
-        for week in weeks:
+        async def request_and_parse_week(
+            week: str, session: aiohttp.client.ClientSession, states: Dict[Any, Any]
+        ) -> bool:
             states["RdBtnLstWeek"] = week
-            r = await s.post(regtable_url, data=states)
+            r = await session.post(regtable_url, data=states)
             raw_html = await r.text()
             if parse_mohw_week_page(raw_html):
                 return True
+            return False
 
-        return False
+        availability: List[bool] = list(
+            filter(
+                lambda x: x,
+                list(
+                    await asyncio.gather(
+                        *[request_and_parse_week(week, s, states) for week in weeks]
+                    )
+                ),
+            )
+        )
+
+        return bool(availability)
 
 
 def parse_mohw_week_page(body: str) -> bool:
