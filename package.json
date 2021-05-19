@@ -16,16 +16,18 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "flow-bin": "^0.149.0",
     "parcel": "^2.0.0-beta.2",
+    "serve-static": "^1.14.1",
     "sharp": "^0.28.1"
   },
   "scripts": {
     "backend": "parcel build ./frontend/index.html; cd backend; pipenv run python app.py --scrape",
     "build": "parcel build ./frontend/index.html",
+    "postbuild": "cp -r public/* dist/",
     "fixpipenv": "pipenv lock --pre --clear",
     "frontend": "parcel serve ./frontend/index.html",
     "lint": "pipenv run black backend/*; yarn eslint frontend --ext .js,.jsx --fix",
     "lint:fix": "yarn eslint frontend --ext .js,.jsx --fix",
-    "scrape": "cd backend; pipenv run python local_scraper.py",
+    "scrape": "pipenv run python backend/local_scraper.py > public/data/scraped/availabilities.json",
     "hospitals:summary": "pipenv run python utils/hospitals_summary.py data/hospitals.csv > public/data/hospitals.csv.json",
     "tc": "pipenv run pyre; yarn flow",
     "test": "pipenv run python -m unittest discover -s backend/tests/integration -t backend"
