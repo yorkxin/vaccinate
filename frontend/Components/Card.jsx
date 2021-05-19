@@ -21,7 +21,7 @@ function getBadgeText(availability: Availability, t): string {
       return t('txt-available');
     case 'Unavailable':
       return t('txt-unavailable');
-    case 'No Data':
+    case 'No data':
     default:
       return t('txt-noData');
   }
