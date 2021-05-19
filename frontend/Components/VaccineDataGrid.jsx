@@ -40,7 +40,7 @@ export default function VaccineDataGrid(
 
   const availableHospitals = hospitals.filter((row) => getAvailability(row.hospitalId) === 'Available');
   const unavailableHospitals = hospitals.filter((row) => getAvailability(row.hospitalId) === 'Unavailable');
-  const noDataHospitals = hospitals.filter((row) => getAvailability(row.hospitalId) === 'No Data');
+  const noDataHospitals = hospitals.filter((row) => getAvailability(row.hospitalId) === 'No data');
 
   const makeCardGrid = (hospitals: Array<Hospital>, buttonText: string) => (hospitals.length !== 0
     ? (
