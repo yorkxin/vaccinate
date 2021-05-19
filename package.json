@@ -26,6 +26,7 @@
     "lint": "pipenv run black backend/*; yarn eslint frontend --ext .js,.jsx --fix",
     "lint:fix": "yarn eslint frontend --ext .js,.jsx --fix",
     "scrape": "cd backend; pipenv run python local_scraper.py",
+    "hospitals:summary": "pipenv run python utils/hospitals_summary.py data/hospitals.csv > public/data/hospitals.csv.json",
     "tc": "pipenv run pyre; yarn flow",
     "test": "pipenv run python -m unittest discover -s backend/tests/integration -t backend"
   },

@@ -1,0 +1,281 @@
+[
+  {
+    "address": "20148\n基隆市信義區信二路268號",
+    "department": "家庭醫學科",
+    "hospitalId": 1,
+    "location": "基隆市",
+    "name": "衛生福利部基隆醫院",
+    "phone": "(02)2429-2525\n轉5610、5619",
+    "website": "https://netreg.kln.mohw.gov.tw/OINetReg/OINetReg.Reg/Reg_RegTable.aspx?Date=&DivDr=0196&HID=F&Noon=&Way=Dept"
+  },
+  {
+    "address": "10449\n臺北市中山區中山北路二段92號",
+    "department": "家庭醫學科",
+    "hospitalId": 2,
+    "location": "臺北市",
+    "name": "馬偕紀念醫院臺北院區",
+    "phone": "(02)2543-3535\n轉2266",
+    "website": "https://www.mmh.org.tw/register_single_doctor.php?depid=75&drcode=O75D"
+  },
+  {
+    "address": "10048\n臺北市中正區常德街1號",
+    "department": "家庭醫學科第10診 (02)2312-3456\n(旅遊醫學特別門診) 轉67614",
+    "hospitalId": 3,
+    "location": "臺北市",
+    "name": "臺大醫院",
+    "phone": "",
+    "website": "https://reg.ntuh.gov.tw/WebAdministration/VaccineRegPublic.aspx?Hosp=T0&Reg="
+  },
+  {
+    "address": "11490臺北市內湖區成功路二段325號",
+    "department": "旅遊醫學門診",
+    "hospitalId": 4,
+    "location": "臺北市",
+    "name": "三軍總醫院內湖院區",
+    "phone": "(02)8792-3311",
+    "website": "https://www2.ndmctsgh.edu.tw/newwebreg/Register/Doctors?pos=B&DeptCode=131&DeptGroup=4#"
+  },
+  {
+    "address": "11696臺北市文山區興隆路三段111號",
+    "department": "家庭醫學科",
+    "hospitalId": 5,
+    "location": "臺北市",
+    "name": "臺北市立萬芳醫院",
+    "phone": "(02)2930-7930",
+    "website": "https://www.wanfang.gov.tw/p3_register_e3.aspx?deptcode=B055&depttype=A&deptdesc=%E8%87%AA%E8%B2%BBCOVID-19%E7%96%AB%E8%8B%97%E9%96%80%E8%A8%BA&depttype2=A"
+  },
+  {
+    "address": "11031臺北市信義區吳興街252號",
+    "department": "家庭醫學科",
+    "hospitalId": 6,
+    "location": "臺北市",
+    "name": "臺北醫學大學附設醫院",
+    "phone": "(02)2737-2181",
+    "website": "https://www.tmuh.org.tw/service/regist/016"
+  },
+  {
+    "address": "22060新北市板橋區南雅南路二段21號",
+    "department": "家庭醫學科",
+    "hospitalId": 7,
+    "location": "新北市",
+    "name": "亞東紀念醫院",
+    "phone": "(02)8966-7000",
+    "website": "https://hos.femh.org.tw/newfemh/webreg_net/index.aspx"
+  },
+  {
+    "address": "23142新北市新店區建國路289號",
+    "department": "家庭醫學科",
+    "hospitalId": 8,
+    "location": "新北市",
+    "name": "臺北慈濟醫院",
+    "phone": "(02)6628-9779",
+    "website": "https://reg-prod.tzuchi-healthcare.org.tw/tchw/HIS5OpdReg/OpdTimeShow?Pass=XD;0022"
+  },
+  {
+    "address": "26546宜蘭縣羅東鎮中正南路160號",
+    "department": "家庭醫學科",
+    "hospitalId": 9,
+    "location": "宜蘭縣",
+    "name": "羅東聖母醫院",
+    "phone": "(03)954-4106",
+    "website": "http://www.smh.org.tw/2014/?q=content/covid-19-vaccination-registration-self-paid-%E8%87%AA%E8%B2%BB%E6%8E%A5%E7%A8%AE"
+  },
+  {
+    "address": "33004\n桃園市桃園區中山路1492號",
+    "department": "家庭醫學科、\n感染科、小兒科",
+    "hospitalId": 10,
+    "location": "桃園市",
+    "name": "衛生福利部桃園醫院",
+    "phone": "(03)369-9721\n轉8322",
+    "website": "https://tyghnetreg.tygh.mohw.gov.tw/OINetReg/OINetReg.Reg/Reg_RegTable.aspx?HID=F&Way=Dept&DivDr=0126&Date=&Noon="
+  },
+  {
+    "address": "30059\n新竹市北區經國路一段442巷25號",
+    "department": "家庭醫學科",
+    "hospitalId": 11,
+    "location": "新竹市",
+    "name": "臺大分院新竹醫院",
+    "phone": "(03)532-6151\n轉3753",
+    "website": "https://reg.ntuh.gov.tw/WebAdministration/VaccineRegPublic.aspx?Hosp=T4&RegionCode="
+  },
+  {
+    "address": "30268\n新竹縣竹北市縣政二路69號",
+    "department": "家庭醫學科、感染\n科",
+    "hospitalId": 12,
+    "location": "新竹縣",
+    "name": "東元綜合醫院",
+    "phone": "(03)552-7000",
+    "website": "https://w3.tyh.com.tw/WebRegList_Dept.aspx?d=55"
+  },
+  {
+    "address": "36054苗栗縣苗栗市為公路747號",
+    "department": "家庭醫學科",
+    "hospitalId": 13,
+    "location": "苗栗縣",
+    "name": "衛生福利部苗栗醫院",
+    "phone": "(037)261-920",
+    "website": "https://reg2.mil.mohw.gov.tw/OINetReg/OINetReg.Reg/Reg_NetReg.aspx"
+  },
+  {
+    "address": "40343臺中市西區三民路一段199號",
+    "department": "家庭醫學科",
+    "hospitalId": 14,
+    "location": "臺中市",
+    "name": "衛生福利部臺中醫院",
+    "phone": "(04)2229-4411",
+    "website": "https://www03.taic.mohw.gov.tw/OINetReg/OINetReg.Reg/Reg_RegTable.aspx?HID=F&Way=Dept&DivDr=01CD&Date=&Noon="
+  },
+  {
+    "address": "43503\n臺中市梧棲區臺灣大道八段699號",
+    "department": "家庭醫學科",
+    "hospitalId": 15,
+    "location": "臺中市",
+    "name": "童綜合醫院梧棲院區",
+    "phone": "(04)2658-1919\n轉4000",
+    "website": "http://rg.sltung.com.tw/EM/QLogin.aspx"
+  },
+  {
+    "address": "50006彰化市南校街135號",
+    "department": "家庭醫學科",
+    "hospitalId": 16,
+    "location": "彰化縣",
+    "name": "彰化基督教醫院",
+    "phone": "(04)723-8595",
+    "website": "https://www1.cch.org.tw/opd/service-e.aspx?id=1900&Page=11&#p"
+  },
+  {
+    "address": "南投縣埔里鎮鐵山路1號",
+    "department": "感染科",
+    "hospitalId": 17,
+    "location": "南投縣",
+    "name": "埔里基督醫院",
+    "phone": "(049)291-2151",
+    "website": "http://web2.pch.org.tw/booking/Covid19Reg/Covid19Reg.aspx?InsType=1"
+  },
+  {
+    "address": "54062\n南投縣南投市復興路478號",
+    "department": "家庭醫學科、感染\n科",
+    "hospitalId": 18,
+    "location": "南投縣",
+    "name": "衛生福利部南投醫院",
+    "phone": "(049)223-1150",
+    "website": "https://netreg01.nant.mohw.gov.tw/OINetReg/OINetReg.Reg/Reg_RegTable.aspx?HID=F&Way=Dept&DivDr=0220&Date=&Noon="
+  },
+  {
+    "address": "64041雲林縣斗六市雲林路二段579號",
+    "department": "家庭醫學科",
+    "hospitalId": 19,
+    "location": "雲林縣",
+    "name": "臺大醫院雲林分院",
+    "phone": "(05)532-3911",
+    "website": "https://web.ylh.gov.tw/covid-19/"
+  },
+  {
+    "address": "60069嘉義市東區大雅路二段565號",
+    "department": "健康檢查中心",
+    "hospitalId": 20,
+    "location": "嘉義市",
+    "name": "天主教聖馬爾定醫院",
+    "phone": "(05)275-6000",
+    "website": "http://www.stm.org.tw/new/listDetail.aspx?n_id=1059&me_id=12"
+  },
+  {
+    "address": "61363嘉義縣朴子市嘉朴路西段6號",
+    "department": "家庭醫學科",
+    "hospitalId": 21,
+    "location": "嘉義縣",
+    "name": "嘉義長庚紀念醫院",
+    "phone": "(05)362-1000",
+    "website": "https://register.cgmh.org.tw/Department/6/60990E"
+  },
+  {
+    "address": "70403\n臺南市北區勝利路138號",
+    "department": "家庭醫學科",
+    "hospitalId": 22,
+    "location": "臺南市",
+    "name": "成大醫院",
+    "phone": "(06)235-3535\n轉2270",
+    "website": "https://service.hosp.ncku.edu.tw/Tandem/MainUI.aspx?Lang=&skv=EzNec8%2bb3OYprHkqM83gBiNJ2d6GNAz2gvscJU0dxqw%3d"
+  },
+  {
+    "address": "81267高雄市小港區山明路482號",
+    "department": "家庭醫學科",
+    "hospitalId": 23,
+    "location": "高雄市",
+    "name": "高雄市立小港醫院",
+    "phone": "(07)803-6783",
+    "website": "https://www.kmsh.org.tw/web/BookVaccineSysInter"
+  },
+  {
+    "address": "80457高雄市鼓山區中華一路976號",
+    "department": "小兒科",
+    "hospitalId": 24,
+    "location": "高雄市",
+    "name": "高雄市立聯合醫院",
+    "phone": "(07)555-2565",
+    "website": "https://www.kmsh.org.tw/web/BookVaccineSysInter"
+  },
+  {
+    "address": "90059屏東縣屏東市大連路60號",
+    "department": "家庭醫學科",
+    "hospitalId": 25,
+    "location": "屏東縣",
+    "name": "屏東基督教醫院",
+    "phone": "(08)736-8686",
+    "website": "https://www.ptch.org.tw/network/reg_opdForm.asp?cov19=ET5O#"
+  },
+  {
+    "address": "97061花蓮縣花蓮市中正路600號",
+    "department": "家庭醫學科",
+    "hospitalId": 26,
+    "location": "花蓮縣",
+    "name": "衛生福利部花蓮醫院",
+    "phone": "(03)835-8141",
+    "website": "https://www.hwln.mohw.gov.tw/?aid=301&page_name=detail&iid=3724"
+  },
+  {
+    "address": "97002花蓮縣花蓮市中央路三段707號",
+    "department": "家庭醫學科",
+    "hospitalId": 27,
+    "location": "花蓮縣",
+    "name": "花蓮慈濟醫院",
+    "phone": "(03)856-1825",
+    "website": "https://hlm.tzuchi.com.tw/index.php/guide/covid19-2"
+  },
+  {
+    "address": "95043臺東縣臺東市五權街1號",
+    "department": "家庭醫學科",
+    "hospitalId": 28,
+    "location": "臺東縣",
+    "name": "衛生福利部臺東醫院",
+    "phone": "(089)324-112",
+    "website": "https://netreg01.tait.mohw.gov.tw/OINetReg/OINetReg.Reg/Reg_RegTable.aspx?HID=F&Way=Dept&DivDr=0119&Date=&Noon="
+  },
+  {
+    "address": "89142金門縣金湖鎮復興路2號",
+    "department": "家庭醫學科",
+    "hospitalId": 29,
+    "location": "金門縣",
+    "name": "衛生福利部金門醫院",
+    "phone": "(082)332-546",
+    "website": "http://netreg.kmhp.mohw.gov.tw/OINetReg/OINetReg.Reg/Reg_RegTable.aspx?HID=F&Way=Dept&DivDr=104A&Date=&Noon="
+  },
+  {
+    "address": "20941連江縣南竿鄉復興村217號",
+    "department": "家庭醫學科",
+    "hospitalId": 30,
+    "location": "連江縣",
+    "name": "連江縣立醫院",
+    "phone": "(0836)23995",
+    "website": "https://www.matsuh.gov.tw/news/content/C5ACD1FD1106F2763F80FF24514690F4"
+  },
+  {
+    "address": "88056澎湖縣馬公市前寮里90號",
+    "department": "感染科",
+    "hospitalId": 31,
+    "location": "澎湖縣",
+    "name": "三軍總醫院澎湖分院",
+    "phone": "(06)921-1116",
+    "website": "http://netreg.afph.tsgh.ndmctsgh.edu.tw/webreg/calendar_type/5xn1z9fPG5H4JDJEV98dHQ%3D%3D"
+  }
+]
