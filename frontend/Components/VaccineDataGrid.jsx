@@ -7,18 +7,40 @@ import type { Hospital } from '../Types/Hospital';
 import type { VaccineType } from '../Types/VaccineType';
 import type { Availability } from '../Types/Availability';
 
+type AvailabilityPerVaccineType = {
+  "self_paid": Availability,
+  "government_paid": Availability
+}
+
 export default function VaccineDataGrid(
-  props: { rows: Array<Hospital>, vaccineType: VaccineType },
+  props: {
+    hospitals: Array<Hospital>,
+    vaccineType: VaccineType,
+    availabilities: Object<String, AvailabilityPerVaccineType> },
 ): React.Node {
-  const { rows, vaccineType } = props;
+  const { hospitals, vaccineType, availabilities } = props;
   const { t } = useTranslation('dataGrid');
 
-  const getAvailability: (Hospital) => Availability = (hospital) => (vaccineType === 'SelfPaid'
-    ? hospital.selfPaidAvailability : hospital.governmentPaidAvailability);
+  const getAvailability: (id) => Availability = (id) => {
+    const a = availabilities[`${id}`];
 
-  const availableHospitals = rows.filter((row) => getAvailability(row) === 'Available');
-  const unavailableHospitals = rows.filter((row) => getAvailability(row) === 'Unavailable');
-  const noDataHospitals = rows.filter((row) => getAvailability(row) === 'No data');
+    if (!a) {
+      return 'No Data';
+    }
+
+    switch (vaccineType) {
+      case 'SelfPaid':
+        return a.self_paid;
+      case 'GovernmentPaid':
+        return a.government_paid;
+      default:
+        return 'No Data';
+    }
+  };
+
+  const availableHospitals = hospitals.filter((row) => getAvailability(row.hospitalId) === 'Available');
+  const unavailableHospitals = hospitals.filter((row) => getAvailability(row.hospitalId) === 'Unavailable');
+  const noDataHospitals = hospitals.filter((row) => getAvailability(row.hospitalId) === 'No Data');
 
   const makeCardGrid = (hospitals: Array<Hospital>, buttonText: string) => (hospitals.length !== 0
     ? (
@@ -27,7 +49,7 @@ export default function VaccineDataGrid(
           <div className="col" key={hospital.hospitalId.toString()}>
             <Card
               address={hospital.address}
-              availability={getAvailability(hospital)}
+              availability={getAvailability(hospital.hospitalId)}
               buttonText={buttonText}
               department={hospital.department}
               hospitalId={hospital.hospitalId}

@@ -7,13 +7,16 @@ import VaccineDataGrid from '../Components/VaccineDataGrid';
 import Spinner from '../Components/Spinner';
 
 export default function Home(): React.Node {
-  const [rows, setRows] = React.useState([]);
+  const [hospitals, setHospitals] = React.useState([]);
+  const [availabilities, setAvailabilities] = React.useState({});
   const [vaccineType, setVaccineType] = React.useState('GovernmentPaid');
   const [gt] = useTranslation('app');
-  const url = './hospitals';
+  const hospitalsPath = '/data/hospitals.csv.json';
+  const availabilitiesPath = '/data/scraped/availabilities.json';
 
   React.useEffect(() => {
-    fetch(url).then((data) => data.json()).then((res) => setRows(res));
+    fetch(hospitalsPath).then((data) => data.json()).then((res) => setHospitals(res));
+    fetch(availabilitiesPath).then((data) => data.json()).then((res) => setAvailabilities(res));
   }, []); // Empty list makes this useEffect similar to componentDidMount();
 
   return (
@@ -27,7 +30,7 @@ export default function Home(): React.Node {
         </div>
       </div>
       <h2 style={{ textAlign: 'center' }}>{ gt('txt-vaccineAvailability') }</h2>
-      {rows.length === 0 ? <Spinner />
+      {hospitals.length === 0 ? <Spinner />
         : (
           <>
             <div style={{ textAlign: 'center' }}>
@@ -71,7 +74,8 @@ export default function Home(): React.Node {
             </div>
             <VaccineDataGrid
               vaccineType={vaccineType}
-              rows={rows}
+              hospitals={hospitals}
+              availabilities={availabilities}
             />
           </>
         )}
