@@ -90,10 +90,10 @@ async def scrape() -> List[ScrapedData]:
                 "government_paid": AppointmentAvailability.NO_DATA,
             }
 
-    return list(as_dict.items())
+    return as_dict
 
 if __name__ == "__main__":
     data = asyncio.run(scrape())
-    print(json.dumps(data)) # to stdout
+    print(json.dumps(data, indent=2)) # to stdout
 
     print("--- %s seconds ---" % (time.time() - START_TIME), file=sys.stderr)

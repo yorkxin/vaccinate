@@ -8,7 +8,7 @@ HospitalID = int
 class AppointmentAvailability(str, Enum):
     AVAILABLE: str = "Available"
     UNAVAILABLE: str = "Unavailable"
-    NO_DATA: str = "No Data"
+    NO_DATA: str = "No data"
 
 
 class Hospital(TypedDict):
