@@ -40,16 +40,15 @@ jobs:
 
       - name: Run Scraper
         working-directory: ./main
-        run: |
-          pipenv run python backend/local_scraper.py > availability.json
+        run: yarn run scrape
 
       - name: Commit into gh-pages branch
         working-directory: ./gh-pages
         run: |
-          git config --local user.name "scraper by yorkxin"
-          git config --local user.email "ducksteven@gmail.com"
+          git config --local user.name "Builder by ${{ github.actor }}"
+          git config --local user.email "noreply@g0v.tw"
 
-          cp ../main/availability.json ./data/availability.json
-          git add ./data/availability.json
+          cp -R ../main/public/data/scraped/* ./data/scraped/
+          git add ./data/scraped/
           git commit -m "Refresh at $(date)"
           git push
